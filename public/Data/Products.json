@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Wireless Headphones by JBL",
-    "price": 1177.48,
+    "price": 10.0,
     "description": "The wireless headphones by JBL offers high quality and is perfect for home use.",
     "size": "Standard",
     "image1": "/images/wireless-headphones-front.png",
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "name": "Wireless Headphones by Sony",
-    "price": 391.78,
+    "price": 3.33,
     "description": "The wireless headphones by Sony offers high quality and is perfect for home use.",
     "size": "Standard",
     "image1": "/images/wireless-headphones-front.png",
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "name": "Wireless Headphones by DJI",
-    "price": 172.18,
+    "price": 1.46,
     "description": "The wireless headphones by DJI offers high quality and is perfect for outdoor activities.",
     "size": "Standard",
     "image1": "/images/wireless-headphones-front.png",
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "name": "Bluetooth Speaker by Lenovo",
-    "price": 889.07,
+    "price": 7.55,
     "description": "The bluetooth speaker by Lenovo offers high quality and is perfect for home use.",
     "size": "Standard",
     "image1": "/images/bluetooth-speaker-front.png",
@@ -50,7 +50,7 @@
   {
     "id": 5,
     "name": "Bluetooth Speaker by Dell",
-    "price": 548.58,
+    "price": 4.66,
     "description": "The bluetooth speaker by Dell offers high quality and is perfect for outdoor activities.",
     "size": "Standard",
     "image1": "/images/bluetooth-speaker-front.png",
@@ -62,7 +62,7 @@
   {
     "id": 6,
     "name": "Bluetooth Speaker by JBL",
-    "price": 1154.05,
+    "price": 9.8,
     "description": "The bluetooth speaker by JBL offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/bluetooth-speaker-front.png",
@@ -74,7 +74,7 @@
   {
     "id": 7,
     "name": "Smartphone by Dell",
-    "price": 834.72,
+    "price": 7.09,
     "description": "The smartphone by Dell offers high quality and is perfect for home use.",
     "size": "Standard",
     "image1": "/images/smartphone-front.png",
@@ -86,7 +86,7 @@
   {
     "id": 8,
     "name": "Smartphone by Sony",
-    "price": 273.96,
+    "price": 2.33,
     "description": "The smartphone by Sony offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/smartphone-front.png",
@@ -98,7 +98,7 @@
   {
     "id": 9,
     "name": "Smartphone by JBL",
-    "price": 1046.58,
+    "price": 8.88,
     "description": "The smartphone by JBL offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/smartphone-front.png",
@@ -110,7 +110,7 @@
   {
     "id": 10,
     "name": "Smartwatch by Bose",
-    "price": 508.05,
+    "price": 4.31,
     "description": "The smartwatch by Bose offers high quality and is perfect for professional work.",
     "size": "Standard",
     "image1": "/images/smartwatch-front.png",
@@ -122,7 +122,7 @@
   {
     "id": 11,
     "name": "Smartwatch by HP",
-    "price": 256.27,
+    "price": 2.18,
     "description": "The smartwatch by HP offers high quality and is perfect for home use.",
     "size": "Standard",
     "image1": "/images/smartwatch-front.png",
@@ -134,7 +134,7 @@
   {
     "id": 12,
     "name": "Smartwatch by Lenovo",
-    "price": 843.3,
+    "price": 7.16,
     "description": "The smartwatch by Lenovo offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/smartwatch-front.png",
@@ -146,7 +146,7 @@
   {
     "id": 13,
     "name": "Laptop by HP",
-    "price": 1112.07,
+    "price": 9.44,
     "description": "The laptop by HP offers high quality and is perfect for outdoor activities.",
     "size": "Standard",
     "image1": "/images/laptop-front.png",
@@ -158,7 +158,7 @@
   {
     "id": 14,
     "name": "Laptop by Sony",
-    "price": 759.13,
+    "price": 6.44,
     "description": "The laptop by Sony offers high quality and is perfect for home use.",
     "size": "Standard",
     "image1": "/images/laptop-front.png",
@@ -170,7 +170,7 @@
   {
     "id": 15,
     "name": "Laptop by JBL",
-    "price": 1123.42,
+    "price": 9.54,
     "description": "The laptop by JBL offers high quality and is perfect for outdoor activities.",
     "size": "Standard",
     "image1": "/images/laptop-front.png",
@@ -182,7 +182,7 @@
   {
     "id": 16,
     "name": "Tablet by DJI",
-    "price": 762.18,
+    "price": 6.47,
     "description": "The tablet by DJI offers high quality and is perfect for outdoor activities.",
     "size": "Standard",
     "image1": "/images/tablet-front.png",
@@ -194,7 +194,7 @@
   {
     "id": 17,
     "name": "Tablet by Dell",
-    "price": 84.64,
+    "price": 0.72,
     "description": "The tablet by Dell offers high quality and is perfect for home use.",
     "size": "Standard",
     "image1": "/images/tablet-front.png",
@@ -206,7 +206,7 @@
   {
     "id": 18,
     "name": "Tablet by Anker",
-    "price": 289.29,
+    "price": 2.46,
     "description": "The tablet by Anker offers high quality and is perfect for professional work.",
     "size": "Standard",
     "image1": "/images/tablet-front.png",
@@ -218,7 +218,7 @@
   {
     "id": 19,
     "name": "Gaming Mouse by Anker",
-    "price": 1107.3,
+    "price": 9.4,
     "description": "The gaming mouse by Anker offers high quality and is perfect for professional work.",
     "size": "Standard",
     "image1": "/images/gaming-mouse-front.png",
@@ -230,7 +230,7 @@
   {
     "id": 20,
     "name": "Gaming Mouse by Bose",
-    "price": 227.67,
+    "price": 1.93,
     "description": "The gaming mouse by Bose offers high quality and is perfect for professional work.",
     "size": "Standard",
     "image1": "/images/gaming-mouse-front.png",
@@ -242,7 +242,7 @@
   {
     "id": 21,
     "name": "Gaming Mouse by Dell",
-    "price": 1103.74,
+    "price": 9.37,
     "description": "The gaming mouse by Dell offers high quality and is perfect for daily use.",
     "size": "Standard",
     "image1": "/images/gaming-mouse-front.png",
@@ -254,7 +254,7 @@
   {
     "id": 22,
     "name": "Mechanical Keyboard by Lenovo",
-    "price": 473.37,
+    "price": 4.02,
     "description": "The mechanical keyboard by Lenovo offers high quality and is perfect for home use.",
     "size": "Standard",
     "image1": "/images/mechanical-keyboard-front.png",
@@ -266,7 +266,7 @@
   {
     "id": 23,
     "name": "Mechanical Keyboard by Anker",
-    "price": 748.23,
+    "price": 6.35,
     "description": "The mechanical keyboard by Anker offers high quality and is perfect for professional work.",
     "size": "Standard",
     "image1": "/images/mechanical-keyboard-front.png",
@@ -278,7 +278,7 @@
   {
     "id": 24,
     "name": "Mechanical Keyboard by Lenovo",
-    "price": 445.01,
+    "price": 3.78,
     "description": "The mechanical keyboard by Lenovo offers high quality and is perfect for home use.",
     "size": "Standard",
     "image1": "/images/mechanical-keyboard-front.png",
@@ -290,7 +290,7 @@
   {
     "id": 25,
     "name": "Portable Charger by Sony",
-    "price": 115.03,
+    "price": 0.98,
     "description": "The portable charger by Sony offers high quality and is perfect for outdoor activities.",
     "size": "Standard",
     "image1": "/images/portable-charger-front.png",
@@ -302,7 +302,7 @@
   {
     "id": 26,
     "name": "Portable Charger by Lenovo",
-    "price": 642.28,
+    "price": 5.45,
     "description": "The portable charger by Lenovo offers high quality and is perfect for daily use.",
     "size": "Standard",
     "image1": "/images/portable-charger-front.png",
@@ -314,7 +314,7 @@
   {
     "id": 27,
     "name": "Portable Charger by HP",
-    "price": 260.05,
+    "price": 2.21,
     "description": "The portable charger by HP offers high quality and is perfect for home use.",
     "size": "Standard",
     "image1": "/images/portable-charger-front.png",
@@ -326,7 +326,7 @@
   {
     "id": 28,
     "name": "Drone by JBL",
-    "price": 922.95,
+    "price": 7.83,
     "description": "The drone by JBL offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/drone-front.png",
@@ -338,7 +338,7 @@
   {
     "id": 29,
     "name": "Drone by Lenovo",
-    "price": 57.51,
+    "price": 0.49,
     "description": "The drone by Lenovo offers high quality and is perfect for professional work.",
     "size": "Standard",
     "image1": "/images/drone-front.png",
@@ -350,7 +350,7 @@
   {
     "id": 30,
     "name": "Drone by Dell",
-    "price": 1129.68,
+    "price": 9.59,
     "description": "The drone by Dell offers high quality and is perfect for outdoor activities.",
     "size": "Standard",
     "image1": "/images/drone-front.png",
@@ -362,7 +362,7 @@
   {
     "id": 31,
     "name": "T-Shirt by Levi's",
-    "price": 649.22,
+    "price": 5.51,
     "description": "The t-shirt by Levi's offers high quality and is perfect for daily use.",
     "size": "Standard",
     "image1": "/images/t-shirt-front.png",
@@ -374,7 +374,7 @@
   {
     "id": 32,
     "name": "T-Shirt by Levi's",
-    "price": 574.07,
+    "price": 4.87,
     "description": "The t-shirt by Levi's offers high quality and is perfect for gifts.",
     "size": "XL",
     "image1": "/images/t-shirt-front.png",
@@ -386,7 +386,7 @@
   {
     "id": 33,
     "name": "T-Shirt by Levi's",
-    "price": 639.98,
+    "price": 5.43,
     "description": "The t-shirt by Levi's offers high quality and is perfect for gifts.",
     "size": "XXL",
     "image1": "/images/t-shirt-front.png",
@@ -398,7 +398,7 @@
   {
     "id": 34,
     "name": "Jeans by Zara",
-    "price": 740.52,
+    "price": 6.29,
     "description": "The jeans by Zara offers high quality and is perfect for gifts.",
     "size": "XXL",
     "image1": "/images/jeans-front.png",
@@ -410,7 +410,7 @@
   {
     "id": 35,
     "name": "Jeans by H&M",
-    "price": 706.89,
+    "price": 6.0,
     "description": "The jeans by H&M offers high quality and is perfect for professional work.",
     "size": "XXL",
     "image1": "/images/jeans-front.png",
@@ -422,7 +422,7 @@
   {
     "id": 36,
     "name": "Jeans by H&M",
-    "price": 1182.33,
+    "price": 10.04,
     "description": "The jeans by H&M offers high quality and is perfect for gifts.",
     "size": "XL",
     "image1": "/images/jeans-front.png",
@@ -434,7 +434,7 @@
   {
     "id": 37,
     "name": "Hoodie by Levi's",
-    "price": 315.46,
+    "price": 2.68,
     "description": "The hoodie by Levi's offers high quality and is perfect for gifts.",
     "size": "M",
     "image1": "/images/hoodie-front.png",
@@ -446,7 +446,7 @@
   {
     "id": 38,
     "name": "Hoodie by Prada",
-    "price": 502.57,
+    "price": 4.27,
     "description": "The hoodie by Prada offers high quality and is perfect for home use.",
     "size": "Standard",
     "image1": "/images/hoodie-front.png",
@@ -458,7 +458,7 @@
   {
     "id": 39,
     "name": "Hoodie by Under Armour",
-    "price": 253.59,
+    "price": 2.15,
     "description": "The hoodie by Under Armour offers high quality and is perfect for outdoor activities.",
     "size": "M",
     "image1": "/images/hoodie-front.png",
@@ -470,7 +470,7 @@
   {
     "id": 40,
     "name": "Jacket by Puma",
-    "price": 511.21,
+    "price": 4.34,
     "description": "The jacket by Puma offers high quality and is perfect for daily use.",
     "size": "XXL",
     "image1": "/images/jacket-front.png",
@@ -482,7 +482,7 @@
   {
     "id": 41,
     "name": "Jacket by Under Armour",
-    "price": 575.13,
+    "price": 4.88,
     "description": "The jacket by Under Armour offers high quality and is perfect for daily use.",
     "size": "XXL",
     "image1": "/images/jacket-front.png",
@@ -494,7 +494,7 @@
   {
     "id": 42,
     "name": "Jacket by Puma",
-    "price": 150.5,
+    "price": 1.28,
     "description": "The jacket by Puma offers high quality and is perfect for gifts.",
     "size": "M",
     "image1": "/images/jacket-front.png",
@@ -506,7 +506,7 @@
   {
     "id": 43,
     "name": "Sweater by Puma",
-    "price": 1152.04,
+    "price": 9.78,
     "description": "The sweater by Puma offers high quality and is perfect for home use.",
     "size": "M",
     "image1": "/images/sweater-front.png",
@@ -518,7 +518,7 @@
   {
     "id": 44,
     "name": "Sweater by Gucci",
-    "price": 360.66,
+    "price": 3.06,
     "description": "The sweater by Gucci offers high quality and is perfect for outdoor activities.",
     "size": "S",
     "image1": "/images/sweater-front.png",
@@ -530,7 +530,7 @@
   {
     "id": 45,
     "name": "Sweater by Gucci",
-    "price": 259.71,
+    "price": 2.2,
     "description": "The sweater by Gucci offers high quality and is perfect for gifts.",
     "size": "XXL",
     "image1": "/images/sweater-front.png",
@@ -542,7 +542,7 @@
   {
     "id": 46,
     "name": "Dress by H&M",
-    "price": 623.65,
+    "price": 5.29,
     "description": "The dress by H&M offers high quality and is perfect for outdoor activities.",
     "size": "L",
     "image1": "/images/dress-front.png",
@@ -554,7 +554,7 @@
   {
     "id": 47,
     "name": "Dress by H&M",
-    "price": 1022.09,
+    "price": 8.68,
     "description": "The dress by H&M offers high quality and is perfect for daily use.",
     "size": "M",
     "image1": "/images/dress-front.png",
@@ -566,7 +566,7 @@
   {
     "id": 48,
     "name": "Dress by Zara",
-    "price": 114.76,
+    "price": 0.97,
     "description": "The dress by Zara offers high quality and is perfect for home use.",
     "size": "M",
     "image1": "/images/dress-front.png",
@@ -578,7 +578,7 @@
   {
     "id": 49,
     "name": "Skirt by Puma",
-    "price": 1060.83,
+    "price": 9.01,
     "description": "The skirt by Puma offers high quality and is perfect for outdoor activities.",
     "size": "L",
     "image1": "/images/skirt-front.png",
@@ -590,7 +590,7 @@
   {
     "id": 50,
     "name": "Skirt by H&M",
-    "price": 614.51,
+    "price": 5.22,
     "description": "The skirt by H&M offers high quality and is perfect for home use.",
     "size": "S",
     "image1": "/images/skirt-front.png",
@@ -602,7 +602,7 @@
   {
     "id": 51,
     "name": "Skirt by Nike",
-    "price": 398.45,
+    "price": 3.38,
     "description": "The skirt by Nike offers high quality and is perfect for daily use.",
     "size": "S",
     "image1": "/images/skirt-front.png",
@@ -614,7 +614,7 @@
   {
     "id": 52,
     "name": "Shorts by Levi's",
-    "price": 594.79,
+    "price": 5.05,
     "description": "The shorts by Levi's offers high quality and is perfect for daily use.",
     "size": "S",
     "image1": "/images/shorts-front.png",
@@ -626,7 +626,7 @@
   {
     "id": 53,
     "name": "Shorts by Zara",
-    "price": 371.85,
+    "price": 3.16,
     "description": "The shorts by Zara offers high quality and is perfect for professional work.",
     "size": "L",
     "image1": "/images/shorts-front.png",
@@ -638,7 +638,7 @@
   {
     "id": 54,
     "name": "Shorts by Adidas",
-    "price": 264.97,
+    "price": 2.25,
     "description": "The shorts by Adidas offers high quality and is perfect for home use.",
     "size": "S",
     "image1": "/images/shorts-front.png",
@@ -650,7 +650,7 @@
   {
     "id": 55,
     "name": "Blazer by Levi's",
-    "price": 123.98,
+    "price": 1.05,
     "description": "The blazer by Levi's offers high quality and is perfect for gifts.",
     "size": "XXL",
     "image1": "/images/blazer-front.png",
@@ -662,7 +662,7 @@
   {
     "id": 56,
     "name": "Blazer by Zara",
-    "price": 79.66,
+    "price": 0.68,
     "description": "The blazer by Zara offers high quality and is perfect for home use.",
     "size": "S",
     "image1": "/images/blazer-front.png",
@@ -674,7 +674,7 @@
   {
     "id": 57,
     "name": "Blazer by Nike",
-    "price": 562.29,
+    "price": 4.77,
     "description": "The blazer by Nike offers high quality and is perfect for outdoor activities.",
     "size": "S",
     "image1": "/images/blazer-front.png",
@@ -686,7 +686,7 @@
   {
     "id": 58,
     "name": "Socks by Uniqlo",
-    "price": 75.68,
+    "price": 0.64,
     "description": "The socks by Uniqlo offers high quality and is perfect for gifts.",
     "size": "XXL",
     "image1": "/images/socks-front.png",
@@ -698,7 +698,7 @@
   {
     "id": 59,
     "name": "Socks by Prada",
-    "price": 428.72,
+    "price": 3.64,
     "description": "The socks by Prada offers high quality and is perfect for gifts.",
     "size": "S",
     "image1": "/images/socks-front.png",
@@ -710,7 +710,7 @@
   {
     "id": 60,
     "name": "Socks by Gucci",
-    "price": 195.93,
+    "price": 1.66,
     "description": "The socks by Gucci offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/socks-front.png",
@@ -722,7 +722,7 @@
   {
     "id": 61,
     "name": "Running Shoes by Timberland",
-    "price": 616.04,
+    "price": 5.23,
     "description": "The running shoes by Timberland offers high quality and is perfect for home use.",
     "size": "XL",
     "image1": "/images/running-shoes-front.png",
@@ -734,7 +734,7 @@
   {
     "id": 62,
     "name": "Running Shoes by Fila",
-    "price": 210.63,
+    "price": 1.79,
     "description": "The running shoes by Fila offers high quality and is perfect for professional work.",
     "size": "S",
     "image1": "/images/running-shoes-front.png",
@@ -746,7 +746,7 @@
   {
     "id": 63,
     "name": "Running Shoes by Puma",
-    "price": 43.81,
+    "price": 0.37,
     "description": "The running shoes by Puma offers high quality and is perfect for daily use.",
     "size": "L",
     "image1": "/images/running-shoes-front.png",
@@ -758,7 +758,7 @@
   {
     "id": 64,
     "name": "Sneakers by Fila",
-    "price": 284.23,
+    "price": 2.41,
     "description": "The sneakers by Fila offers high quality and is perfect for outdoor activities.",
     "size": "XL",
     "image1": "/images/sneakers-front.png",
@@ -770,7 +770,7 @@
   {
     "id": 65,
     "name": "Sneakers by Nike",
-    "price": 831.41,
+    "price": 7.06,
     "description": "The sneakers by Nike offers high quality and is perfect for gifts.",
     "size": "M",
     "image1": "/images/sneakers-front.png",
@@ -782,7 +782,7 @@
   {
     "id": 66,
     "name": "Sneakers by Clarks",
-    "price": 80.09,
+    "price": 0.68,
     "description": "The sneakers by Clarks offers high quality and is perfect for professional work.",
     "size": "S",
     "image1": "/images/sneakers-front.png",
@@ -794,7 +794,7 @@
   {
     "id": 67,
     "name": "Formal Shoes by Nike",
-    "price": 269.16,
+    "price": 2.28,
     "description": "The formal shoes by Nike offers high quality and is perfect for gifts.",
     "size": "XL",
     "image1": "/images/formal-shoes-front.png",
@@ -806,7 +806,7 @@
   {
     "id": 68,
     "name": "Formal Shoes by Adidas",
-    "price": 1050.26,
+    "price": 8.92,
     "description": "The formal shoes by Adidas offers high quality and is perfect for professional work.",
     "size": "S",
     "image1": "/images/formal-shoes-front.png",
@@ -818,7 +818,7 @@
   {
     "id": 69,
     "name": "Formal Shoes by Reebok",
-    "price": 690.2,
+    "price": 5.86,
     "description": "The formal shoes by Reebok offers high quality and is perfect for outdoor activities.",
     "size": "XL",
     "image1": "/images/formal-shoes-front.png",
@@ -830,7 +830,7 @@
   {
     "id": 70,
     "name": "Boots by New Balance",
-    "price": 504.71,
+    "price": 4.28,
     "description": "The boots by New Balance offers high quality and is perfect for daily use.",
     "size": "Standard",
     "image1": "/images/boots-front.png",
@@ -842,7 +842,7 @@
   {
     "id": 71,
     "name": "Boots by Fila",
-    "price": 610.37,
+    "price": 5.18,
     "description": "The boots by Fila offers high quality and is perfect for daily use.",
     "size": "XXL",
     "image1": "/images/boots-front.png",
@@ -854,7 +854,7 @@
   {
     "id": 72,
     "name": "Boots by Adidas",
-    "price": 950.71,
+    "price": 8.07,
     "description": "The boots by Adidas offers high quality and is perfect for outdoor activities.",
     "size": "XXL",
     "image1": "/images/boots-front.png",
@@ -866,7 +866,7 @@
   {
     "id": 73,
     "name": "Sandals by Fila",
-    "price": 575.77,
+    "price": 4.89,
     "description": "The sandals by Fila offers high quality and is perfect for gifts.",
     "size": "XXL",
     "image1": "/images/sandals-front.png",
@@ -878,7 +878,7 @@
   {
     "id": 74,
     "name": "Sandals by Clarks",
-    "price": 75.07,
+    "price": 0.64,
     "description": "The sandals by Clarks offers high quality and is perfect for home use.",
     "size": "Standard",
     "image1": "/images/sandals-front.png",
@@ -890,7 +890,7 @@
   {
     "id": 75,
     "name": "Sandals by New Balance",
-    "price": 830.71,
+    "price": 7.05,
     "description": "The sandals by New Balance offers high quality and is perfect for outdoor activities.",
     "size": "XXL",
     "image1": "/images/sandals-front.png",
@@ -902,7 +902,7 @@
   {
     "id": 76,
     "name": "Flip Flops by Fila",
-    "price": 1084.69,
+    "price": 9.21,
     "description": "The flip flops by Fila offers high quality and is perfect for home use.",
     "size": "Standard",
     "image1": "/images/flip-flops-front.png",
@@ -914,7 +914,7 @@
   {
     "id": 77,
     "name": "Flip Flops by Nike",
-    "price": 1189.97,
+    "price": 10.1,
     "description": "The flip flops by Nike offers high quality and is perfect for outdoor activities.",
     "size": "XXL",
     "image1": "/images/flip-flops-front.png",
@@ -926,7 +926,7 @@
   {
     "id": 78,
     "name": "Flip Flops by Converse",
-    "price": 154.35,
+    "price": 1.31,
     "description": "The flip flops by Converse offers high quality and is perfect for gifts.",
     "size": "XXL",
     "image1": "/images/flip-flops-front.png",
@@ -938,7 +938,7 @@
   {
     "id": 79,
     "name": "Heels by Puma",
-    "price": 149.02,
+    "price": 1.27,
     "description": "The heels by Puma offers high quality and is perfect for daily use.",
     "size": "XXL",
     "image1": "/images/heels-front.png",
@@ -950,7 +950,7 @@
   {
     "id": 80,
     "name": "Heels by Vans",
-    "price": 977.32,
+    "price": 8.3,
     "description": "The heels by Vans offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/heels-front.png",
@@ -962,7 +962,7 @@
   {
     "id": 81,
     "name": "Heels by Converse",
-    "price": 392.3,
+    "price": 3.33,
     "description": "The heels by Converse offers high quality and is perfect for gifts.",
     "size": "L",
     "image1": "/images/heels-front.png",
@@ -974,7 +974,7 @@
   {
     "id": 82,
     "name": "Loafers by Puma",
-    "price": 18.62,
+    "price": 0.16,
     "description": "The loafers by Puma offers high quality and is perfect for gifts.",
     "size": "L",
     "image1": "/images/loafers-front.png",
@@ -986,7 +986,7 @@
   {
     "id": 83,
     "name": "Loafers by Converse",
-    "price": 821.27,
+    "price": 6.97,
     "description": "The loafers by Converse offers high quality and is perfect for professional work.",
     "size": "XL",
     "image1": "/images/loafers-front.png",
@@ -998,7 +998,7 @@
   {
     "id": 84,
     "name": "Loafers by Fila",
-    "price": 125.01,
+    "price": 1.06,
     "description": "The loafers by Fila offers high quality and is perfect for outdoor activities.",
     "size": "XL",
     "image1": "/images/loafers-front.png",
@@ -1010,7 +1010,7 @@
   {
     "id": 85,
     "name": "Slip-ons by Fila",
-    "price": 270.98,
+    "price": 2.3,
     "description": "The slip-ons by Fila offers high quality and is perfect for home use.",
     "size": "L",
     "image1": "/images/slip-ons-front.png",
@@ -1022,7 +1022,7 @@
   {
     "id": 86,
     "name": "Slip-ons by Vans",
-    "price": 918.49,
+    "price": 7.8,
     "description": "The slip-ons by Vans offers high quality and is perfect for outdoor activities.",
     "size": "M",
     "image1": "/images/slip-ons-front.png",
@@ -1034,7 +1034,7 @@
   {
     "id": 87,
     "name": "Slip-ons by New Balance",
-    "price": 929.41,
+    "price": 7.89,
     "description": "The slip-ons by New Balance offers high quality and is perfect for daily use.",
     "size": "M",
     "image1": "/images/slip-ons-front.png",
@@ -1046,7 +1046,7 @@
   {
     "id": 88,
     "name": "Trail Shoes by Adidas",
-    "price": 323.95,
+    "price": 2.75,
     "description": "The trail shoes by Adidas offers high quality and is perfect for home use.",
     "size": "XL",
     "image1": "/images/trail-shoes-front.png",
@@ -1058,7 +1058,7 @@
   {
     "id": 89,
     "name": "Trail Shoes by Vans",
-    "price": 1113.24,
+    "price": 9.45,
     "description": "The trail shoes by Vans offers high quality and is perfect for gifts.",
     "size": "XL",
     "image1": "/images/trail-shoes-front.png",
@@ -1070,7 +1070,7 @@
   {
     "id": 90,
     "name": "Trail Shoes by Clarks",
-    "price": 439.77,
+    "price": 3.73,
     "description": "The trail shoes by Clarks offers high quality and is perfect for outdoor activities.",
     "size": "XL",
     "image1": "/images/trail-shoes-front.png",
@@ -1082,7 +1082,7 @@
   {
     "id": 91,
     "name": "Cookbook by Oxford",
-    "price": 949.94,
+    "price": 8.06,
     "description": "The cookbook by Oxford offers high quality and is perfect for outdoor activities.",
     "size": "Standard",
     "image1": "/images/cookbook-front.png",
@@ -1094,7 +1094,7 @@
   {
     "id": 92,
     "name": "Cookbook by O'Reilly",
-    "price": 218.39,
+    "price": 1.85,
     "description": "The cookbook by O'Reilly offers high quality and is perfect for outdoor activities.",
     "size": "Standard",
     "image1": "/images/cookbook-front.png",
@@ -1106,7 +1106,7 @@
   {
     "id": 93,
     "name": "Cookbook by Bloomsbury",
-    "price": 981.44,
+    "price": 8.33,
     "description": "The cookbook by Bloomsbury offers high quality and is perfect for professional work.",
     "size": "Standard",
     "image1": "/images/cookbook-front.png",
@@ -1118,7 +1118,7 @@
   {
     "id": 94,
     "name": "Science Fiction Novel by Simon & Schuster",
-    "price": 826.0,
+    "price": 7.01,
     "description": "The science fiction novel by Simon & Schuster offers high quality and is perfect for daily use.",
     "size": "Standard",
     "image1": "/images/science-fiction-novel-front.png",
@@ -1130,7 +1130,7 @@
   {
     "id": 95,
     "name": "Science Fiction Novel by Penguin",
-    "price": 714.01,
+    "price": 6.06,
     "description": "The science fiction novel by Penguin offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/science-fiction-novel-front.png",
@@ -1142,7 +1142,7 @@
   {
     "id": 96,
     "name": "Science Fiction Novel by Macmillan",
-    "price": 138.22,
+    "price": 1.17,
     "description": "The science fiction novel by Macmillan offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/science-fiction-novel-front.png",
@@ -1154,7 +1154,7 @@
   {
     "id": 97,
     "name": "Mystery Novel by HarperCollins",
-    "price": 313.97,
+    "price": 2.67,
     "description": "The mystery novel by HarperCollins offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/mystery-novel-front.png",
@@ -1166,7 +1166,7 @@
   {
     "id": 98,
     "name": "Mystery Novel by Bloomsbury",
-    "price": 777.7,
+    "price": 6.6,
     "description": "The mystery novel by Bloomsbury offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/mystery-novel-front.png",
@@ -1178,7 +1178,7 @@
   {
     "id": 99,
     "name": "Mystery Novel by Pearson",
-    "price": 386.9,
+    "price": 3.28,
     "description": "The mystery novel by Pearson offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/mystery-novel-front.png",
@@ -1190,7 +1190,7 @@
   {
     "id": 100,
     "name": "Romance Novel by Bloomsbury",
-    "price": 554.27,
+    "price": 4.71,
     "description": "The romance novel by Bloomsbury offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/romance-novel-front.png",
@@ -1202,7 +1202,7 @@
   {
     "id": 101,
     "name": "Romance Novel by O'Reilly",
-    "price": 475.55,
+    "price": 4.04,
     "description": "The romance novel by O'Reilly offers high quality and is perfect for professional work.",
     "size": "Standard",
     "image1": "/images/romance-novel-front.png",
@@ -1214,7 +1214,7 @@
   {
     "id": 102,
     "name": "Romance Novel by HarperCollins",
-    "price": 722.44,
+    "price": 6.13,
     "description": "The romance novel by HarperCollins offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/romance-novel-front.png",
@@ -1226,7 +1226,7 @@
   {
     "id": 103,
     "name": "History Book by Penguin",
-    "price": 102.8,
+    "price": 0.87,
     "description": "The history book by Penguin offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/history-book-front.png",
@@ -1238,7 +1238,7 @@
   {
     "id": 104,
     "name": "History Book by Oxford",
-    "price": 168.69,
+    "price": 1.43,
     "description": "The history book by Oxford offers high quality and is perfect for home use.",
     "size": "Standard",
     "image1": "/images/history-book-front.png",
@@ -1250,7 +1250,7 @@
   {
     "id": 105,
     "name": "History Book by Random House",
-    "price": 146.68,
+    "price": 1.25,
     "description": "The history book by Random House offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/history-book-front.png",
@@ -1262,7 +1262,7 @@
   {
     "id": 106,
     "name": "Self-Help Book by Macmillan",
-    "price": 1100.82,
+    "price": 9.34,
     "description": "The self-help book by Macmillan offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/self-help-book-front.png",
@@ -1274,7 +1274,7 @@
   {
     "id": 107,
     "name": "Self-Help Book by Cambridge",
-    "price": 871.62,
+    "price": 7.4,
     "description": "The self-help book by Cambridge offers high quality and is perfect for professional work.",
     "size": "Standard",
     "image1": "/images/self-help-book-front.png",
@@ -1286,7 +1286,7 @@
   {
     "id": 108,
     "name": "Self-Help Book by Bloomsbury",
-    "price": 448.37,
+    "price": 3.81,
     "description": "The self-help book by Bloomsbury offers high quality and is perfect for home use.",
     "size": "Standard",
     "image1": "/images/self-help-book-front.png",
@@ -1298,7 +1298,7 @@
   {
     "id": 109,
     "name": "Programming Guide by Cambridge",
-    "price": 131.69,
+    "price": 1.12,
     "description": "The programming guide by Cambridge offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/programming-guide-front.png",
@@ -1310,7 +1310,7 @@
   {
     "id": 110,
     "name": "Programming Guide by Cambridge",
-    "price": 843.73,
+    "price": 7.16,
     "description": "The programming guide by Cambridge offers high quality and is perfect for daily use.",
     "size": "Standard",
     "image1": "/images/programming-guide-front.png",
@@ -1322,7 +1322,7 @@
   {
     "id": 111,
     "name": "Programming Guide by Simon & Schuster",
-    "price": 1064.6,
+    "price": 9.04,
     "description": "The programming guide by Simon & Schuster offers high quality and is perfect for home use.",
     "size": "Standard",
     "image1": "/images/programming-guide-front.png",
@@ -1334,7 +1334,7 @@
   {
     "id": 112,
     "name": "Biography by Random House",
-    "price": 187.61,
+    "price": 1.59,
     "description": "The biography by Random House offers high quality and is perfect for outdoor activities.",
     "size": "Standard",
     "image1": "/images/biography-front.png",
@@ -1346,7 +1346,7 @@
   {
     "id": 113,
     "name": "Biography by Simon & Schuster",
-    "price": 663.36,
+    "price": 5.63,
     "description": "The biography by Simon & Schuster offers high quality and is perfect for daily use.",
     "size": "Standard",
     "image1": "/images/biography-front.png",
@@ -1358,7 +1358,7 @@
   {
     "id": 114,
     "name": "Biography by Penguin",
-    "price": 1154.8,
+    "price": 9.8,
     "description": "The biography by Penguin offers high quality and is perfect for daily use.",
     "size": "Standard",
     "image1": "/images/biography-front.png",
@@ -1370,7 +1370,7 @@
   {
     "id": 115,
     "name": "Poetry Collection by HarperCollins",
-    "price": 499.93,
+    "price": 4.24,
     "description": "The poetry collection by HarperCollins offers high quality and is perfect for outdoor activities.",
     "size": "Standard",
     "image1": "/images/poetry-collection-front.png",
@@ -1382,7 +1382,7 @@
   {
     "id": 116,
     "name": "Poetry Collection by Simon & Schuster",
-    "price": 1094.37,
+    "price": 9.29,
     "description": "The poetry collection by Simon & Schuster offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/poetry-collection-front.png",
@@ -1394,7 +1394,7 @@
   {
     "id": 117,
     "name": "Poetry Collection by Pearson",
-    "price": 1039.95,
+    "price": 8.83,
     "description": "The poetry collection by Pearson offers high quality and is perfect for daily use.",
     "size": "Standard",
     "image1": "/images/poetry-collection-front.png",
@@ -1406,7 +1406,7 @@
   {
     "id": 118,
     "name": "Children's Book by Random House",
-    "price": 337.96,
+    "price": 2.87,
     "description": "The children's book by Random House offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/children's-book-front.png",
@@ -1418,7 +1418,7 @@
   {
     "id": 119,
     "name": "Children's Book by Penguin",
-    "price": 1082.37,
+    "price": 9.19,
     "description": "The children's book by Penguin offers high quality and is perfect for outdoor activities.",
     "size": "Standard",
     "image1": "/images/children's-book-front.png",
@@ -1430,7 +1430,7 @@
   {
     "id": 120,
     "name": "Children's Book by Penguin",
-    "price": 213.64,
+    "price": 1.81,
     "description": "The children's book by Penguin offers high quality and is perfect for home use.",
     "size": "Standard",
     "image1": "/images/children's-book-front.png",
@@ -1442,7 +1442,7 @@
   {
     "id": 121,
     "name": "Watch by Prada",
-    "price": 548.98,
+    "price": 4.66,
     "description": "The watch by Prada offers high quality and is perfect for home use.",
     "size": "Standard",
     "image1": "/images/watch-front.png",
@@ -1454,7 +1454,7 @@
   {
     "id": 122,
     "name": "Watch by Fossil",
-    "price": 30.34,
+    "price": 0.26,
     "description": "The watch by Fossil offers high quality and is perfect for gifts.",
     "size": "Standard",
     "image1": "/images/watch-front.png",
@@ -1466,7 +1466,7 @@
   {
     "id": 123,
     "name": "Watch by Louis Vuitton",
-    "price": 330.57,
+    "price": 2.81,
     "description": "The watch by Louis Vuitton offers high quality and is perfect for professional work.",
     "size": "Standard",
     "image1": "/images/watch-front.png",
@@ -1478,7 +1478,7 @@
   {
     "id": 124,
     "name": "Wallet by Coach",
-    "price": 59.36,
+    "price": 0.5,
     "description": "The wallet by Coach offers high quality and is perfect for professional work.",
     "size": "Standard",
     "image1": "/images/wallet-front.png",
@@ -1490,7 +1490,7 @@
   {
     "id": 125,
     "name": "Wallet by Louis Vuitton",
-    "price": 377.96,
+    "price": 3.21,
     "description": "The wallet by Louis Vuitton offers high quality and is perfect for professional work.",
     "size": "Standard",
     "image1": "/images/wallet-front.png",
