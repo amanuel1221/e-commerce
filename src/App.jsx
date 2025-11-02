@@ -7,6 +7,7 @@ function App() {
 
   return (
     <>
+    <p className="bg-blue-600"> boom</p>
      </>
   )
 }
