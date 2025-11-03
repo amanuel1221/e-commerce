@@ -1,48 +1,103 @@
-import React, { useEffect } from 'react';
-import UseProducts from '../store/UseProducts';
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import useProducts from "../store/useProducts";
+import { Heart } from "lucide-react";
 
 const ProductCard = () => {
-  const { products, error, loading, fetchingProducts } = UseProducts();
+  const {
+    products,
+    cart,
+    favorites,
+    count,
+    fetchingProducts,
+    addToCart,
+    loadMore,
+    resetCount,
+    toggleFavorite,
+    loading,
+    error,
+  } = useProducts();
 
   useEffect(() => {
-    // fetch once on mount
     fetchingProducts();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    resetCount();
+  }, [fetchingProducts, resetCount]);
+
+  const getCartCount = (id) => {
+    const found = cart.find((item) => item.id === id);
+    return found ? found.quantity : 0;
+  };
+
+  const isFavorite = (id) => favorites.some((item) => item.id === id);
 
   return (
-    <div className="px-6 py-8 bg-gray-50 min-h-screen" id="productcard">
-      {loading && (
-        <p className="text-center text-gray-500 text-lg">Loading products...</p>
-      )}
-      {error && (
-        <p className="text-center text-red-500 text-lg">{error}</p>
-      )}
+    <div className="px-6 py-8 bg-gray-50 min-h-screen">
+      {loading && <p className="text-center text-gray-500 text-lg">Loading products...</p>}
+      {error && <p className="text-center text-red-500 text-lg">{error}</p>}
       {products.length === 0 && !loading && (
         <p className="text-center text-gray-400 text-lg">No products available.</p>
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
-        {products.slice(0, 12).map((item) => (
-          <div
-            key={item.id}
-            className="relative flex flex-col border border-gray-200 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-white to-gray-100 hover:from-gray-50 hover:to-gray-200"
-          >
-            <div className="w-full h-60 bg-gray-100">
-              <img
-                src={item.image1}
-                alt={item.name}
-                className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
-              />
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-6">
+        {products.slice(0, count).map((item) => {
+          const countInCart = getCartCount(item.id);
+
+          return (
+            <div
+              key={item.id}
+              className="relative flex flex-col border border-gray-200 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-white to-gray-100 hover:from-gray-50 hover:to-gray-200"
+            >
+              <Link to={`/product/${item.id}`} state={{ product: item }}>
+                <div className="w-full h-80 bg-gray-100 relative">
+                  <img
+                    src={item.image1}
+                    alt={item.name}
+                    className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
+                  />
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      toggleFavorite(item);
+                    }}
+                    className="absolute top-2 right-2 p-2 rounded-full transition-transform duration-200 transform hover:scale-110"
+                  >
+                    <Heart
+                      className={`w-6 h-6 transition-colors duration-300 ${
+                        isFavorite(item.id) ? "text-red-500" : "text-gray-400"
+                      }`}
+                      fill={isFavorite(item.id) ? "currentColor" : "none"}
+                    />
+                  </button>
+                </div>
+              </Link>
+
+              <div className="p-4 flex flex-col gap-2 text-gray-700">
+                <p className="font-semibold text-lg truncate">{item.name}</p>
+                <p className="text-sm text-gray-500">⭐ {item.rating}</p>
+                <p className="font-bold text-gray-800">${item.price}</p>
+
+                <button
+                  onClick={() => addToCart(item)}
+                  className="mt-2 bg-amber-400 hover:bg-amber-500 text-white font-semibold py-2 px-4 rounded-xl transition duration-300"
+                >
+                  Add To Cart {countInCart > 0 && `(${countInCart})`}
+                </button>
+              </div>
             </div>
-            <div className="p-4 flex flex-col gap-1 text-gray-700">
-              <p className="font-semibold text-lg truncate">{item.name}</p>
-              <p className="text-sm text-gray-500">⭐ {item.rating}</p>
-              <p className="font-bold text-gray-800">${item.price}</p>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
+
+      {count < products.length && (
+        <div className="flex justify-center mt-8">
+          <button
+            onClick={loadMore}
+            className="bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-all duration-300 font-semibold"
+          >
+            Load More
+          </button>
+        </div>
+      )}
     </div>
   );
 };
