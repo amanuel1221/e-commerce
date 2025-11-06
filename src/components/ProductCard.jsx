@@ -5,7 +5,6 @@ import { Heart } from "lucide-react";
 
 const ProductCard = () => {
   const {
-    products,
     cart,
     favorites,
     count,
@@ -16,12 +15,24 @@ const ProductCard = () => {
     toggleFavorite,
     loading,
     error,
+    // Filters
+    filterCategory,
+    filterSize,
+    sortOption,
+    searchQuery,
+    setFilterCategory,
+    setFilterSize,
+    setSortOption,
+    setSearchQuery,
+    getFilteredSortedItems,
   } = useProducts();
 
   useEffect(() => {
     fetchingProducts();
     resetCount();
   }, [fetchingProducts, resetCount]);
+
+  const products = getFilteredSortedItems();
 
   const getCartCount = (id) => {
     const found = cart.find((item) => item.id === id);
@@ -32,12 +43,50 @@ const ProductCard = () => {
 
   return (
     <div className="px-6 py-8 bg-gray-50 min-h-screen">
+      {/* ---------- Filter Controls ---------- */}
+      <div className="flex flex-col sm:flex-row justify-between gap-4 mb-6">
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder="Search products..."
+          className="border border-gray-300 rounded-lg px-4 py-2 w-full sm:w-1/3 focus:outline-none focus:ring-2 focus:ring-amber-400"
+        />
+
+        <div className="flex flex-wrap gap-3 justify-center sm:justify-end">
+          <select
+            value={filterCategory}
+            onChange={(e) => setFilterCategory(e.target.value)}
+            className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
+          >
+            <option value="All">All Categories</option>
+         <option value="Clothes">cloths</option>
+            <option value="Shoes">Shoes</option>
+            <option value="Accessories">Accessories</option>
+          </select>
+
+          
+
+          <select
+            value={sortOption}
+            onChange={(e) => setSortOption(e.target.value)}
+            className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
+          >
+            <option value="none">Default</option>
+            <option value="PriceLowHigh">Price: Low to High</option>
+            <option value="PriceHighLow">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      {/* ---------- Loading & Error ---------- */}
       {loading && <p className="text-center text-gray-500 text-lg">Loading products...</p>}
       {error && <p className="text-center text-red-500 text-lg">{error}</p>}
       {products.length === 0 && !loading && (
-        <p className="text-center text-gray-400 text-lg">No products available.</p>
+        <p className="text-center text-gray-400 text-lg">No products found.</p>
       )}
 
+      {/* ---------- Product Grid ---------- */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-6">
         {products.slice(0, count).map((item) => {
           const countInCart = getCartCount(item.id);
@@ -88,6 +137,7 @@ const ProductCard = () => {
         })}
       </div>
 
+      {/* ---------- Load More ---------- */}
       {count < products.length && (
         <div className="flex justify-center mt-8">
           <button
