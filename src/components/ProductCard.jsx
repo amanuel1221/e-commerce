@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import useProducts from "../store/useProducts";
 import { Heart } from "lucide-react";
 
@@ -15,7 +15,7 @@ const ProductCard = () => {
     toggleFavorite,
     loading,
     error,
-    // Filters
+   
     filterCategory,
     filterSize,
     sortOption,
@@ -43,7 +43,7 @@ const ProductCard = () => {
 
   return (
     <div className="px-6 py-8 bg-gray-50 min-h-screen">
-      {/* ---------- Filter Controls ---------- */}
+      
       <div className="flex flex-col sm:flex-row justify-between gap-4 mb-6">
         <input
           type="text"
@@ -79,14 +79,14 @@ const ProductCard = () => {
         </div>
       </div>
 
-      {/* ---------- Loading & Error ---------- */}
+   
       {loading && <p className="text-center text-gray-500 text-lg">Loading products...</p>}
       {error && <p className="text-center text-red-500 text-lg">{error}</p>}
       {products.length === 0 && !loading && (
         <p className="text-center text-gray-400 text-lg">No products found.</p>
       )}
 
-      {/* ---------- Product Grid ---------- */}
+      
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-6">
         {products.slice(0, count).map((item) => {
           const countInCart = getCartCount(item.id);
@@ -96,7 +96,7 @@ const ProductCard = () => {
               key={item.id}
               className="relative flex flex-col border border-gray-200 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-white to-gray-100 hover:from-gray-50 hover:to-gray-200"
             >
-              <Link to={`/product/${item.id}`} state={{ product: item }}>
+              <NavLink to={`/product/${item.id}`} state={{ product: item }}>
                 <div className="w-full h-80 bg-gray-100 relative">
                   <img
                     src={item.image1}
@@ -118,7 +118,7 @@ const ProductCard = () => {
                     />
                   </button>
                 </div>
-              </Link>
+              </NavLink>
 
               <div className="p-4 flex flex-col gap-2 text-gray-700">
                 <p className="font-semibold text-lg truncate">{item.name}</p>
@@ -137,9 +137,9 @@ const ProductCard = () => {
         })}
       </div>
 
-      {/* ---------- Load More ---------- */}
+     
       {count < products.length && (
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-end mt-8">
           <button
             onClick={loadMore}
             className="bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-all duration-300 font-semibold"
