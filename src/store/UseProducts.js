@@ -14,12 +14,12 @@ const useProducts = create(
       filterSize: "All",
       sortOption: "none",
       searchQuery: "",
-
+                                                            
       setFilterCategory: (category) => set({ filterCategory: category }),
       setFilterSize: (size) => set({ filterSize: size }),
       setSortOption: (option) => set({ sortOption: option }),
       setSearchQuery: (query) => set({ searchQuery: query }),
-
+      
       resetCount: () => set({ count: 9 }),
       loadMore: () => set((state) => ({ count: state.count + 3 })),
 

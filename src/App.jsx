@@ -11,7 +11,7 @@ import SignUp from './components/SignUp';
 import Footer from './components/Footer';
 import Favorites from './components/Favorites';
 import ProductDetails from './components/ProductDetails';
-
+import Checkout from './components/Checkout';
 
 function App() {
   
@@ -27,6 +27,7 @@ function App() {
       <Route path="/signup" element={<SignUp />} />
       <Route path="/favorites" element={<Favorites />} />
       <Route path="/product/:id" element={<ProductDetails />} />
+      <Route path="/checkout" element={<Checkout />} />
 
      </Routes>
       <Footer />
