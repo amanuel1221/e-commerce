@@ -12,12 +12,16 @@ import Footer from './components/Footer';
 import Favorites from './components/Favorites';
 import ProductDetails from './components/ProductDetails';
 import Checkout from './components/Checkout';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Profile from './components/Profile';
 
 function App() {
   
 
   return (
     <>
+     <ToastContainer position="top-center" />
     <Router>
       <Navbar/>
      <Routes>
@@ -28,6 +32,7 @@ function App() {
       <Route path="/favorites" element={<Favorites />} />
       <Route path="/product/:id" element={<ProductDetails />} />
       <Route path="/checkout" element={<Checkout />} />
+      <Route path="/profile" element={<Profile />} />
 
      </Routes>
       <Footer />
