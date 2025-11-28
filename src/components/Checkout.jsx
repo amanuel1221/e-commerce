@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useProducts from "../store/useProducts";
+import useOrders from "../store/useOrders";
+import { useAuth } from "../context/authContext";
 
 const Checkout = () => {
   const navigate = useNavigate();
   const { cart, clearCart } = useProducts();
+  const { user } = useAuth();
+  const addOrder = useOrders((state) => state.addOrder);
 
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
@@ -24,14 +28,6 @@ const Checkout = () => {
     cvv: "",
   });
 
-  const handleShippingChange = (e) => {
-    setShipping({ ...shipping, [e.target.name]: e.target.value });
-  };
-
-  const handlePaymentChange = (e) => {
-    setPayment({ ...payment, [e.target.name]: e.target.value });
-  };
-
   const total = cart.reduce(
     (acc, item) =>
       acc +
@@ -39,6 +35,14 @@ const Checkout = () => {
         item.quantity,
     0
   );
+
+  const handleShippingChange = (e) => {
+    setShipping({ ...shipping, [e.target.name]: e.target.value });
+  };
+
+  const handlePaymentChange = (e) => {
+    setPayment({ ...payment, [e.target.name]: e.target.value });
+  };
 
   const handleShippingSubmit = (e) => {
     e.preventDefault();
@@ -66,8 +70,21 @@ const Checkout = () => {
     setTimeout(() => {
       setLoading(false);
       setSuccess(true);
+
+      // ✅ Add order to useOrders store
+      addOrder({
+        id: Date.now().toString(), // unique order id
+        userEmail: user.email,     // logged-in user email
+        items: cart.map((i) => ({ ...i })), // copy of cart items
+        total: total.toFixed(2),
+        shipping,
+        delivered: false,
+        date: new Date().toISOString(), // ✅ proper order date
+      });
+
       clearCart();
-      setTimeout(() => navigate("/"), 2500); // redirect after success
+
+      setTimeout(() => navigate("/orders"), 2500); // redirect to orders
     }, 2000);
   };
 
@@ -89,7 +106,7 @@ const Checkout = () => {
           : "Payment Information"}
       </h2>
 
-      {/* ✅ Order Summary */}
+      {/* Order Summary */}
       {!success && (
         <div className="border rounded-lg p-4 mb-6 bg-gray-50">
           <h3 className="text-lg font-semibold mb-2">Order Summary</h3>
@@ -101,8 +118,7 @@ const Checkout = () => {
               <span>
                 $
                 {(
-                  (item.price -
-                    (item.discount ? item.price * (item.discount / 100) : 0)) *
+                  (item.price - (item.discount ? item.price * (item.discount / 100) : 0)) *
                   item.quantity
                 ).toFixed(2)}
               </span>
@@ -115,7 +131,7 @@ const Checkout = () => {
         </div>
       )}
 
-      {/* ✅ Step 1: Shipping */}
+      {/* Step 1: Shipping */}
       {step === 1 && !success && (
         <form onSubmit={handleShippingSubmit} className="space-y-4">
           <input
@@ -156,7 +172,7 @@ const Checkout = () => {
         </form>
       )}
 
-      {/* ✅ Step 2: Payment */}
+      {/* Step 2: Payment */}
       {step === 2 && !success && (
         <form onSubmit={handlePaymentSubmit} className="space-y-4">
           <input
@@ -215,7 +231,7 @@ const Checkout = () => {
         </form>
       )}
 
-      {/* ✅ Success Message */}
+      {/* Success Message */}
       {success && (
         <div className="text-center text-green-600 py-10">
           <p className="text-2xl font-bold mb-4">🎉 Payment Successful!</p>
@@ -225,7 +241,7 @@ const Checkout = () => {
           <p className="text-gray-600 italic">
             {shipping.address}, {shipping.city}
           </p>
-          <p className="mt-4 text-gray-500 text-sm">Redirecting to home...</p>
+          <p className="mt-4 text-gray-500 text-sm">Redirecting to your orders...</p>
         </div>
       )}
     </div>
