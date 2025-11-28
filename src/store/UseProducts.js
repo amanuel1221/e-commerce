@@ -1,119 +1,151 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import { useAuth } from "../context/authContext";
 
-const useProducts = create(
-  persist(
-    (set, get) => ({
-      products: [],
-      cart: [],
-      favorites: [],
-      loading: false,
-      error: null,
-      count: 9,
-      filterCategory: "All",
-      filterSize: "All",
-      sortOption: "none",
-      searchQuery: "",
-                                                            
-      setFilterCategory: (category) => set({ filterCategory: category }),
-      setFilterSize: (size) => set({ filterSize: size }),
-      setSortOption: (option) => set({ sortOption: option }),
-      setSearchQuery: (query) => set({ searchQuery: query }),
-      
-      resetCount: () => set({ count: 9 }),
-      loadMore: () => set((state) => ({ count: state.count + 3 })),
+const createProductsStore = (email) => {
+  return create(
+    persist(
+      (set, get) => ({
+        products: [],
+        cart: [],
+        favorites: [],
+        orders: [],
+        loading: false,
+        error: null,
+        count: 9,
+        filterCategory: "All",
+        filterSize: "All",
+        sortOption: "none",
+        searchQuery: "",
 
-      fetchingProducts: async () => {
-        set({ loading: true, error: null, products: [] });
-        try {
-          const res = await fetch("/Data/Products.json");
-          if (!res.ok) throw new Error("Network is not working properly");
-          const data = await res.json();
-          set({ products: data, loading: false, error: null });
-        } catch (error) {
-          set({ products: [], loading: false, error: error.message });
-        }
-      },
+        // FILTERS
+        setFilterCategory: (category) => set({ filterCategory: category }),
+        setFilterSize: (size) => set({ filterSize: size }),
+        setSortOption: (option) => set({ sortOption: option }),
+        setSearchQuery: (query) => set({ searchQuery: query }),
 
-      addToCart: (item) => {
-        set((state) => {
-          const existing = state.cart.find((c) => c.id === item.id);
-          const updatedCart = existing
-            ? state.cart.map((c) =>
-                c.id === item.id ? { ...c, quantity: c.quantity + 1 } : c
+        resetCount: () => set({ count: 9 }),
+        loadMore: () => set((state) => ({ count: state.count + 3 })),
+
+        // FETCH PRODUCTS
+        fetchingProducts: async () => {
+          set({ loading: true, error: null, products: [] });
+          try {
+            const res = await fetch("/Data/Products.json");
+            if (!res.ok) throw new Error("Network Error");
+            const data = await res.json();
+            set({ products: data, loading: false });
+          } catch (error) {
+            set({ products: [], loading: false, error: error.message });
+          }
+        },
+
+        // CART
+        addToCart: (item) => {
+          set((state) => {
+            const existing = state.cart.find((c) => c.id === item.id);
+            const updated = existing
+              ? state.cart.map((c) =>
+                  c.id === item.id
+                    ? { ...c, quantity: c.quantity + 1 }
+                    : c
+                )
+              : [...state.cart, { ...item, quantity: 1 }];
+            return { cart: updated };
+          });
+        },
+
+        removeFromCart: (id) => {
+          set((state) => ({
+            cart: state.cart.filter((c) => c.id !== id),
+          }));
+        },
+
+        incrementQuantity: (id) => {
+          set((state) => ({
+            cart: state.cart.map((i) =>
+              i.id === id ? { ...i, quantity: i.quantity + 1 } : i
+            ),
+          }));
+        },
+
+        decrementQuantity: (id) => {
+          set((state) => ({
+            cart: state.cart
+              .map((i) =>
+                i.id === id ? { ...i, quantity: i.quantity - 1 } : i
               )
-            : [...state.cart, { ...item, quantity: 1 }];
-          return { cart: updatedCart };
-        });
-      },
+              .filter((i) => i.quantity > 0),
+          }));
+        },
 
-      removeFromCart: (id) => {
-        set((state) => ({
-          cart: state.cart.filter((c) => c.id !== id),
-        }));
-      },
+        clearCart: () => set({ cart: [] }),
 
-      incrementQuantity: (id) => {
-        set((state) => ({
-          cart: state.cart.map((item) =>
-            item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-          ),
-        }));
-      },
+        // FAVORITES
+        toggleFavorite: (item) => {
+          set((state) => {
+            const exists = state.favorites.find((f) => f.id === item.id);
+            return exists
+              ? { favorites: state.favorites.filter((f) => f.id !== item.id) }
+              : { favorites: [...state.favorites, item] };
+          });
+        },
 
-      decrementQuantity: (id) => {
-        set((state) => ({
-          cart: state.cart
-            .map((item) =>
-              item.id === id ? { ...item, quantity: item.quantity - 1 } : item
-            )
-            .filter((item) => item.quantity > 0),
-        }));
-      },
+        // ORDERS
+        addOrder: (order) => {
+          set((state) => ({
+            orders: [...state.orders, order],
+            cart: [],
+          }));
+        },
 
-      clearCart: () => set({ cart: [] }),
+        // FILTER + SORT
+        getFilteredSortedItems: () => {
+          const { products, filterCategory, filterSize, sortOption, searchQuery } = get();
 
-      toggleFavorite: (item) => {
-        set((state) => {
-          const exists = state.favorites.find((fav) => fav.id === item.id);
-          return exists
-            ? { favorites: state.favorites.filter((fav) => fav.id !== item.id) }
-            : { favorites: [...state.favorites, item] };
-        });
-      },
+          if (!products) return [];
 
-      getFilteredSortedItems: () => {
-        const { products, filterCategory, filterSize, sortOption, searchQuery } =
-          get();
-
-        let filtered =
-          filterCategory === "All"
+          let filtered = filterCategory === "All"
             ? products
             : products.filter((i) => i.category === filterCategory);
 
-        let sized =
-          filterSize === "All"
+          let sized = filterSize === "All"
             ? filtered
             : filtered.filter((i) => i.size === filterSize);
 
-        if (searchQuery) {
-          sized = sized.filter((i) =>
-            i.name.toLowerCase().includes(searchQuery.toLowerCase())
-          );
-        }
+          if (searchQuery) {
+            sized = sized.filter((i) =>
+              i.name.toLowerCase().includes(searchQuery.toLowerCase())
+            );
+          }
 
-        let sorted = [...sized];
-        if (sortOption === "PriceLowHigh") sorted.sort((a, b) => a.price - b.price);
-        else if (sortOption === "PriceHighLow")
-          sorted.sort((a, b) => b.price - a.price);
+          let sorted = [...sized];
+          if (sortOption === "PriceLowHigh") sorted.sort((a, b) => a.price - b.price);
+          else if (sortOption === "PriceHighLow") sorted.sort((a, b) => b.price - a.price);
 
-        return sorted;
-      },
-    }),
-    {
-      name: "products-storage",
-    }
-  )
-);
+          return sorted || [];
+        },
 
-export default useProducts;
+      }),
+
+      {
+        name: `products-storage-${email}`,
+      }
+    )
+  );
+};
+
+// Cache created stores per-email so each user has isolated persisted state
+const stores = {};
+
+export default function useProducts(selector) {
+  const { user } = useAuth();
+  const email = user?.email || "default";
+  if (!stores[email]) {
+    stores[email] = createProductsStore(email);
+  }
+
+  const storeHook = stores[email];
+  // forward selector if provided (matches original zustand hook API)
+  return typeof selector === "function" ? storeHook(selector) : storeHook();
+}
