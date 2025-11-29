@@ -53,37 +53,50 @@ const Signup = () => {
       <form
         onSubmit={handleSignup}
         className="bg-white p-8 rounded-xl shadow-lg w-96"
+        aria-labelledby="signup-heading"
       >
-        <h2 className="text-2xl font-bold mb-6 text-center">Create Account</h2>
+        <h2 id="signup-heading" className="text-2xl font-bold mb-6 text-center">Create Account</h2>
 
-        {error && <li className="text-red-600 mb-3 list-none">{error}</li>}
+        {error && <div role="alert" className="text-red-600 mb-3">{error}</div>}
 
-        <input
-          type="text"
-          placeholder="Full Name"
-          value={fullName}
-          onChange={(e) => setFullName(e.target.value)}
-          required
-          className="w-full p-2 mb-3 border rounded"
-        />
+        <div className="mb-3">
+          <label htmlFor="signup-name" className="block mb-1 font-semibold">Full Name</label>
+          <input
+            id="signup-name"
+            type="text"
+            placeholder="Full Name"
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
+            required
+            className="w-full p-2 mb-3 border rounded"
+          />
+        </div>
 
-        <input
-          type="email"
-          placeholder="Email Address"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          className="w-full p-2 mb-3 border rounded"
-        />
+        <div className="mb-3">
+          <label htmlFor="signup-email" className="block mb-1 font-semibold">Email Address</label>
+          <input
+            id="signup-email"
+            type="email"
+            placeholder="Email Address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="w-full p-2 mb-3 border rounded"
+          />
+        </div>
 
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-          className="w-full p-2 mb-4 border rounded"
-        />
+        <div className="mb-4">
+          <label htmlFor="signup-password" className="block mb-1 font-semibold">Password</label>
+          <input
+            id="signup-password"
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            className="w-full p-2 mb-4 border rounded"
+          />
+        </div>
 
         <button
           type="submit"
