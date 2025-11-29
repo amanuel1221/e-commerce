@@ -4,35 +4,35 @@ import useProducts from "../store/useProducts";
 import { Heart } from "lucide-react";
 
 const ProductCard = () => {
-  const {
-    cart,
-    favorites,
-    count,
-    fetchingProducts,
-    addToCart,
-    loadMore,
-    resetCount,
-    toggleFavorite,
-    loading,
-    error,
-   
-    filterCategory,
-    filterSize,
-    sortOption,
-    searchQuery,
-    setFilterCategory,
-    setFilterSize,
-    setSortOption,
-    setSearchQuery,
-    getFilteredSortedItems,
-  } = useProducts();
+  // Zustand state/functions
+  const cart = useProducts((state) => state.cart);
+  const favorites = useProducts((state) => state.favorites);
+  const count = useProducts((state) => state.count);
+  const fetchingProducts = useProducts((state) => state.fetchingProducts);
+  const addToCart = useProducts((state) => state.addToCart);
+  const loadMore = useProducts((state) => state.loadMore);
+  const resetCount = useProducts((state) => state.resetCount);
+  const toggleFavorite = useProducts((state) => state.toggleFavorite);
+  const loading = useProducts((state) => state.loading);
+  const error = useProducts((state) => state.error);
+
+  const filterCategory = useProducts((state) => state.filterCategory);
+  const sortOption = useProducts((state) => state.sortOption);
+  const searchQuery = useProducts((state) => state.searchQuery);
+  const setFilterCategory = useProducts((state) => state.setFilterCategory);
+  const setSortOption = useProducts((state) => state.setSortOption);
+  const setSearchQuery = useProducts((state) => state.setSearchQuery);
+
+  const getFilteredSortedItems = useProducts((state) => state.getFilteredSortedItems);
 
   useEffect(() => {
     fetchingProducts();
     resetCount();
   }, [fetchingProducts, resetCount]);
 
-  const products = getFilteredSortedItems();
+  // Get products safely
+  const rawProducts = typeof getFilteredSortedItems === "function" ? getFilteredSortedItems() : [];
+  const products = Array.isArray(rawProducts) ? rawProducts : rawProducts ? Object.values(rawProducts) : [];
 
   const getCartCount = (id) => {
     const found = cart.find((item) => item.id === id);
@@ -43,7 +43,7 @@ const ProductCard = () => {
 
   return (
     <div className="px-6 py-8 bg-gray-50 min-h-screen">
-      
+      {/* Search + Filters */}
       <div className="flex flex-col sm:flex-row justify-between gap-4 mb-6">
         <input
           type="text"
@@ -60,12 +60,10 @@ const ProductCard = () => {
             className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
           >
             <option value="All">All Categories</option>
-         <option value="Clothes">cloths</option>
+            <option value="Clothes">Clothes</option>
             <option value="Shoes">Shoes</option>
-            <option value="Accessories">Accessories</option>
+            <option value="Electronics">Electronics</option>
           </select>
-
-          
 
           <select
             value={sortOption}
@@ -79,14 +77,14 @@ const ProductCard = () => {
         </div>
       </div>
 
-   
+      {/* Loading / Errors */}
       {loading && <p className="text-center text-gray-500 text-lg">Loading products...</p>}
       {error && <p className="text-center text-red-500 text-lg">{error}</p>}
-      {products.length === 0 && !loading && (
+      {!loading && products.length === 0 && (
         <p className="text-center text-gray-400 text-lg">No products found.</p>
       )}
 
-      
+      {/* Products Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-6">
         {products.slice(0, count).map((item) => {
           const countInCart = getCartCount(item.id);
@@ -103,17 +101,16 @@ const ProductCard = () => {
                     alt={item.name}
                     className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
                   />
+
                   <button
                     onClick={(e) => {
                       e.preventDefault();
                       toggleFavorite(item);
                     }}
-                    className="absolute top-2 right-2 p-2 rounded-full transition-transform duration-200 transform hover:scale-110"
+                    className="absolute top-2 right-2 p-2 rounded-full transition-transform duration-200 hover:scale-110"
                   >
                     <Heart
-                      className={`w-6 h-6 transition-colors duration-300 ${
-                        isFavorite(item.id) ? "text-red-500" : "text-gray-400"
-                      }`}
+                      className={`w-6 h-6 ${isFavorite(item.id) ? "text-red-500" : "text-gray-400"}`}
                       fill={isFavorite(item.id) ? "currentColor" : "none"}
                     />
                   </button>
@@ -123,11 +120,11 @@ const ProductCard = () => {
               <div className="p-4 flex flex-col gap-2 text-gray-700">
                 <p className="font-semibold text-lg truncate">{item.name}</p>
                 <p className="text-sm text-gray-500">⭐ {item.rating}</p>
-                <p className="font-bold text-gray-800">${item.price}</p>
+                <p className="font-bold text-gray-800">${Number(item.price).toFixed(2)}</p>
 
                 <button
                   onClick={() => addToCart(item)}
-                  className="mt-2 bg-amber-400 hover:bg-amber-500 text-white font-semibold py-2 px-4 rounded-xl transition duration-300"
+                  className="mt-2 bg-amber-400 hover:bg-amber-500 text-white font-semibold py-2 px-4 rounded-xl transition"
                 >
                   Add To Cart {countInCart > 0 && `(${countInCart})`}
                 </button>
@@ -137,12 +134,12 @@ const ProductCard = () => {
         })}
       </div>
 
-     
+      {/* Load more */}
       {count < products.length && (
         <div className="flex justify-end mt-8">
           <button
             onClick={loadMore}
-            className="bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-all duration-300 font-semibold"
+            className="bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition font-semibold"
           >
             Load More
           </button>
