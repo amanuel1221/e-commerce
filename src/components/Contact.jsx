@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaLinkedin, FaFacebook, FaInstagram, FaGithub } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
-
+import { toast } from "react-hot-toast";
 const Contact = () => {
   const [form, setForm] = useState({
     name: "",
@@ -16,8 +16,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Set company to "Personal" if empty
+    const toaster = toast;
     const emailData = {
       ...form,
       company: form.company.trim() === "" ? "Personal" : form.company,
@@ -25,18 +24,18 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_vifmhat",
-        "template_f43objx",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         emailData,
-        "VC6pndVHezILlGDYC"
+        import.meta.env.VITE_EMAILJS_USER_ID
       )
       .then(
         () => {
-          alert("Message sent successfully!");
+          toast.success("✅Message sent successfully!");
           setForm({ name: "", email: "", company: "", message: "" });
         },
         (error) => {
-          alert("Failed to send message. Please try again.");
+          toast.error("Failed to send message. Please try again.");
           console.error(error);
         }
       );
