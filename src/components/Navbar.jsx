@@ -21,14 +21,14 @@ const Navbar = () => {
       : "text-gray-300 hover:text-blue-400 transition";
 
   return (
-    <nav className="bg-gray-900 text-white shadow-md sticky top-0 z-50">
+    <nav className="bg-gray-900 text-white shadow-md sticky top-0 z-50 rounded-xl">
       <div className="container mx-auto flex justify-between items-center px-6 py-3">
         {/* Logo */}
         <NavLink
           to="/"
           className="text-2xl font-extrabold tracking-wide text-blue-400 hover:text-blue-300"
         >
-          MyShop 🛍
+          Stylehub
         </NavLink>
 
         {/* Desktop Menu */}
@@ -42,8 +42,14 @@ const Navbar = () => {
               <NavLink to="/cart" className={navLinkStyle}>
                 Cart
               </NavLink>
+              <NavLink to="/favorites" className={navLinkStyle}>
+                Favorites
+              </NavLink>
               <NavLink to="/profile" className={navLinkStyle}>
                 Profile
+              </NavLink>
+              <NavLink to="/orders" className={navLinkStyle}>
+                Orders
               </NavLink>
               <button
                 onClick={handleLogout}
@@ -78,19 +84,26 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gray-800 px-6 py-4 space-y-4 animate-slideDown">
+        <div className="md:hidden bg-gray-800 px-6 py-4 space-y-4 animate-slideDown  ">
           <NavLink to="/" className={navLinkStyle} onClick={() => setIsOpen(false)}>
             Home
           </NavLink>
 
           {user ? (
-            <>
+            <div  className="flex flex-col gap-4 hover:cursor-pointer ">
               <NavLink
                 to="/cart"
-                className={navLinkStyle}
+                className={navLinkStyle} 
                 onClick={() => setIsOpen(false)}
               >
                 Cart
+              </NavLink>
+              <NavLink
+                to="/favorites"
+                className={navLinkStyle}
+                onClick={() => setIsOpen(false)}
+              >
+                Favorites
               </NavLink>
               <NavLink
                 to="/profile"
@@ -98,6 +111,13 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Profile
+              </NavLink>
+              <NavLink
+                to="/orders"
+                className={navLinkStyle}
+                onClick={() => setIsOpen(false)}
+              >
+                Orders
               </NavLink>
               <button
                 onClick={() => {
@@ -108,7 +128,7 @@ const Navbar = () => {
               >
                 Logout
               </button>
-            </>
+            </div>
           ) : (
             <>
               <NavLink
