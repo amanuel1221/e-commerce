@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-
+import { NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-white border-t border-gray-200 mt-16">
@@ -16,37 +16,39 @@ const Footer = () => {
         
         <ul className="flex flex-wrap justify-center gap-6 text-gray-600 text-sm font-medium">
           <li className="hover:text-indigo-600 transition-colors cursor-pointer">
-            Home
+            <NavLink to="/">Home</NavLink>
           </li>
           <li className="hover:text-indigo-600 transition-colors cursor-pointer">
-            Categories
+            <NavLink to="/categories">Categories</NavLink>
           </li>
           <li className="hover:text-indigo-600 transition-colors cursor-pointer">
-            Deals & privacy
+            <NavLink to="/deals-privacy">Deals & privacy</NavLink>
           </li>
           <li className="hover:text-indigo-600 transition-colors cursor-pointer">
-            Contact
+            <NavLink to="/contact">Contact</NavLink>
           </li>
         </ul>
 
         
         <div className="flex justify-center gap-4">
           <a
-            href="#"
+            href="https://www.facebook.com/manuell211" target="_blank" rel="facebook account of Amanuel"
             className="w-8 h-8 flex items-center justify-center rounded-full bg-indigo-600 text-white hover:bg-indigo-700 transition-all duration-300"
           >
             <FaFacebookF size={14} />
           </a>
           <a
-            href="#"
+            href="https://twitter.com/AmanuelAma66386
+" target="_blank" rel="twitter account of Amanuel"
             className="w-8 h-8 flex items-center justify-center rounded-full bg-indigo-600 text-white hover:bg-indigo-700 transition-all duration-300"
-          >
+          > 
             <FaTwitter size={14} />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/manuelll211/
+" target="_blank" rel="instagram account of Amanuel"
             className="w-8 h-8 flex items-center justify-center rounded-full bg-indigo-600 text-white hover:bg-indigo-700 transition-all duration-300"
-          >
+          > 
             <FaInstagram size={14} />
           </a>
           <a
