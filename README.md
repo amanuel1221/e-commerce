@@ -10,11 +10,11 @@ This project demonstrates product listing, shopping cart functionality, favorite
 
 **Screenshots**
 
-![Home Page](screenshots/home.png)
-![Product Page](screenshots/product.png)
-![Cart Page](screenshots/cart.png)
-![Favorites Page](screenshots/favorites.png)
-![Contact Form](screenshots/contact.png)
+![Home Page](screenshots/Home.png)
+![Product Page](screenshots/Product.png)
+![Cart Page](screenshots/Cart.png)
+![Favorites Page](screenshots/Favorites.png)
+![Contact Form](screenshots/Contact.png)
 
 ---
 
@@ -27,12 +27,14 @@ This project demonstrates product listing, shopping cart functionality, favorite
 - **Favorites / Wishlist** – Mark products as favorites to view them later.
 - **Contact Form** – Send messages via **EmailJS** (frontend-only email sending).
 - **Payment (Dummy/Show Only)** – Simulated payment flow for demonstration purposes.
-- **Search & Filter** – (Optional) Filter products by categories or search terms.
+- **Search & Filter** – Filter products by categories or search terms.
 - **Responsive Design** – Works on desktop, tablet, and mobile devices.
 - **AI Visibility Component** – UI component to showcase AI-powered product suggestions or highlights.
 - **Icons & UI Enhancements** – Using **Lucide React icons** for better visual experience.
+- **Orders history** - Orders history are history or recipents of someones who paid for products it will have show progress of which the items are pending or delivered with in 20 Days.
 
 ---
+
 
 ## 🛠 Tech Stack
 
