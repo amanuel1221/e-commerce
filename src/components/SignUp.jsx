@@ -27,18 +27,17 @@ const Signup = () => {
     }
 
     try {
-      // Create user
+      
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // Add full name to user profile
+     
       await updateProfile(user, { displayName: fullName });
-
       toast.success("🎉 Account created successfully!");
       setFullName("");
       setEmail("");
       setPassword("");
-      navigate("/"); // redirect after signup
+      navigate("/"); 
     } catch (err) {
       if (err.code === "auth/email-already-in-use") {
         setError("This email is already registered. Please sign in.");
