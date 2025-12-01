@@ -15,7 +15,8 @@ This project demonstrates product listing, shopping cart functionality, favorite
 ![Cart Page](screenshots/Cart.png)
 ![Favorites Page](screenshots/Favorites.png)
 ![Contact Form](screenshots/Contact.png)
-
+![Address form](screenshots/Payment-1.png)
+![Payment form](screenshots/Payment-2.png)
 ---
 
 ## 🚀 Features
