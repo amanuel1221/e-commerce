@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import useProducts from "../store/useProducts";
+import useProducts from "../store/UseProducts";
 import { Heart } from "lucide-react";
 
 const ProductCard = () => {
