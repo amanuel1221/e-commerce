@@ -1,42 +1,46 @@
 # 🛒 **E-Commerce Website**
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
+[![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://react.dev/)  
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-38B2AC?logo=tailwindcss)](https://tailwindcss.com/)  
+[![Vite](https://img.shields.io/badge/Vite-4-purple?logo=vite)](https://vitejs.dev/)  
+[![Deployment](https://img.shields.io/badge/Deployed-Vercel-black?logo=vercel)](https://e-commerce-49ma.vercel.app/)
+
 A modern **responsive e-commerce frontend** built with **React**, **Tailwind CSS**, and **Vite**.  
-This project includes product listing, cart management, favorites, a dummy payment flow, EmailJS contact form, AI-driven UI components, and a clean responsive design.
+This project demonstrates product listing, cart management, favorites, a dummy payment flow, EmailJS contact form, AI-driven UI components, and a clean responsive design.
 
 ---
 
 ## 🔗 **Live Demo**
 
-👉 **[Click for DEMo](https://e-commerce-49ma.vercel.app/)**
+👉 **[View Demo](https://e-commerce-49ma.vercel.app/)**
 
 ---
 
 ## 📸 **Screenshots**
 
+| Home | Product | Cart |
+|------|---------|------|
+| ![Home Page](screenshots/Home.png) | ![Product Page](screenshots/Product.png) | ![Cart Page](screenshots/Cart.png) |
 
-![Home Page](screenshots/Home.png)
-![Product Page](screenshots/Product.png)
-![Cart Page](screenshots/Cart.png)
-![Favorites Page](screenshots/Favorites.png)
-![Contact Form](screenshots/Contact.png)
-![Address Form](screenshots/Payment-1.png)
-![Payment Form](screenshots/Payment-2.png)
+| Favorites | Contact | Payment |
+|-----------|---------|---------|
+| ![Favorites Page](screenshots/Favorites.png) | ![Contact Form](screenshots/Contact.png) | ![Payment Form](screenshots/Payment-2.png) |
 
 ---
 
 ## 🚀 **Features**
 
-### **Core Features**
-- 🛍️ **Product Listing** – All products with images, prices, and descriptions.  
-- 🛒 **Shopping Cart** – Add/remove items, update quantities, persistent using localStorage.  
-- ❤️ **Favorites / Wishlist** – Save favorite products.  
-- ✉️ **Contact Form** – Send emails using EmailJS (no backend required).  
-- 💳 **Payment (Demo Only)** – Address + card form UI for checkout simulation.  
-- 🔍 **Search & Filter** – Search by keyword or category.  
-- 🤖 **AI Visibility Component** – Highlights AI-based product suggestions.  
-- 📱 **Responsive UI** – Optimized for mobile, tablet, and desktop.  
-- 🎨 **Modern Icons** – Using Lucide React Icons.  
-- 📦 **Order History** – Simulated progress (Pending → Delivered).
+- 🛍️ **Product Listing** – Images, prices, descriptions  
+- 🛒 **Shopping Cart** – Add/remove items, update quantities, persistent with localStorage  
+- ❤️ **Favorites / Wishlist** – Save favorite products  
+- ✉️ **Contact Form** – EmailJS integration (frontend only)  
+- 💳 **Payment (Demo)** – Address + card form UI for checkout simulation  
+- 🔍 **Search & Filter** – Keyword & category search  
+- 🤖 **AI Visibility Component** – Highlights AI-based product suggestions  
+- 📱 **Responsive UI** – Mobile, tablet, desktop optimized  
+- 🎨 **Modern Icons** – Lucide React Icons  
+- 📦 **Order History** – Simulated order progress (Pending → Delivered)
 
 ---
 
@@ -44,42 +48,37 @@ This project includes product listing, cart management, favorites, a dummy payme
 
 - **Frontend:** React + Vite  
 - **Styling:** Tailwind CSS  
-- **State Management:** React Context API + useState  
+- **State Management:** React Context API + Hooks  
 - **Email Service:** EmailJS  
 - **Icons:** Lucide React  
-- **Hosting:** Netlify / Vercel  
+- **Hosting:** Vercel  
 - **Data:** Static JSON (mock backend)
 
 ---
 
 ## 💻 **Installation & Setup**
 
-### **1. Clone the repository**
 ```bash
+# 1. Clone the repository
 git clone https://github.com/amanuel1221/e-commerce.git
 cd e-commerce
-2. Install dependencies
-bash
-Copy code
-npm install
-3. Add environment variables (EmailJS)
-Create a .env file:
 
-ini
-Copy code
+# 2. Install dependencies
+npm install
+
+# 3. Add environment variables (EmailJS)
+# Create a .env file
 VITE_EMAILJS_SERVICE_ID=xxxx
 VITE_EMAILJS_TEMPLATE_ID=xxxx
 VITE_EMAILJS_PUBLIC_KEY=xxxx
-4. Start development server
-bash
-Copy code
-npm run dev
-5. Open the app
-👉 http://localhost:5173
 
+# 4. Start development server
+npm run dev
+
+# 5. Open the app
+http://localhost:5173
 📂 Project Structure
-css
-Copy code
+plaintext
 e-commerce/
 ├─ public/
 ├─ src/
@@ -126,136 +125,64 @@ No backend required
 
 Uses Service ID, Template ID & Public Key
 
-Safe and beginner friendly
-
-Perfect for portfolio projects
+Beginner-friendly and safe for portfolio projects
 
 💳 Payment Integration (Demo Only)
 No real payment processing
 
 Address & payment form included
 
-Demonstrates real e-commerce checkout flow
+Demonstrates checkout flow UI
 
-Helps practice UI + form handling
-
-🤖 AI Visibility Component
-Highlights recommended products
-
-Uses simulated AI logic
-
-Reusable & scalable
-
-Can be replaced with real AI/ML later
+Practice form handling & validation
 
 📚 What I Learned
-1. Component Architecture
-Structuring reusable components
+Component Architecture – Reusable components, props, shared state
 
-Passing props the right way
+EmailJS – Setup, environment variables, debugging failed submissions
 
-Managing shared state efficiently
+UI Libraries – Tailwind, Lucide icons, Framer Motion animations
 
-2. EmailJS
-Setup and environment variables
+Cart & Payment Logic – State management, totals, multi-step checkout
 
-Creating templates
+Deployment – Fixing Vercel build errors, handling environment variables
 
-Sending emails via frontend
+🧩 Challenges I Faced
+Component Connection Issues – Fixed by lifting state & reorganizing components
 
-Fixing silent/failed submissions
+EmailJS Fails – Solved with correct IDs & .env setup
 
-3. UI Libraries
-Tailwind components
+UI Errors – Debugged imports & library setup
 
-Lucide icons
+Cart & Payment Bugs – Fixed totals & navigation issues
 
-Smooth animations with Framer Motion
+Deployment Errors – Case-sensitive filenames, missing dependencies
 
-Building clean & consistent UI
-
-4. Cart & Payment Logic
-Add / remove / update items
-
-Calculate totals & quantities
-
-Manage state with hooks
-
-Build multi-step checkout UI
-
-5. Deployment
-Fixing Vercel build errors
-
-Handling environment variables
-
-Managing production behavior
-
-## 🧩 Challenges I Faced
-### 1. Component Connection Issues
-State not updating
-
-Props not passed correctly
-✔️ Solved by lifting state + reorganizing components
-
-### 2. EmailJS Fails
-Wrong IDs
-
-Missing keys
-✔️ Solved using .env and checking dashboard
-
-### 3. UI Component Errors
-Incorrect imports
-
-Library setup issues
-✔️ Solved through documentation reading
-
-### 4. Cart & Payment Bugs
-Totals not updating
-
-UI breaks on navigation
-✔️ Fixed through debugging and cleanup
-
-### 5. Deployment Errors
-Case-sensitive filenames
-
-Missing dependencies
-✔️ Solved using Vercel build logs
-
-## 🔧 Future Improvements
+🔧 Future Improvements
 Real backend (Node.js / Django)
 
 Authentication (Login/Register)
 
 Real payments (Stripe/PayPal)
 
-Admin dashboard for managing products
+Admin dashboard for product management
 
 AI-powered recommendations
 
 Persistent orders & favorites in a database
 
-
-
-
 🤝 Contributing
-Fork the repo
-
-Create new branch
-
 bash
-Copy code
+# Fork the repo
+# Create new branch
 git checkout -b feature/your-feature
-Commit changes
 
-bash
-Copy code
+# Commit changes
 git commit -m "Add your feature"
-Push branch
 
-bash
-Copy code
+# Push branch
 git push origin feature/your-feature
-Open a pull request
+Open a pull request 🚀
 
 📄 License
 This project is licensed under the MIT License.
@@ -270,4 +197,3 @@ Vite
 EmailJS
 
 Lucide React Icons
-
