@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import useProducts from "../store/useProducts";
+import useProducts from "../store/UseProducts";
 import { Heart } from "lucide-react";
 
 const Favorites = () => {
