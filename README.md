@@ -7,13 +7,12 @@ This project includes product listing, cart management, favorites, a dummy payme
 
 ## 🔗 **Live Demo**
 
-👉 **[Click Here to View the Live App](https://e-commerce-49ma.vercel.app/)**
+👉 **[Click for DEMo](https://e-commerce-49ma.vercel.app/)**
 
 ---
 
 ## 📸 **Screenshots**
 
-> *(Add your images into a `screenshots/` folder for them to display)*
 
 ![Home Page](screenshots/Home.png)
 ![Product Page](screenshots/Product.png)
@@ -191,38 +190,38 @@ Handling environment variables
 
 Managing production behavior
 
-🧩 Challenges I Faced
-1. Component Connection Issues
+## 🧩 Challenges I Faced
+### 1. Component Connection Issues
 State not updating
 
 Props not passed correctly
 ✔️ Solved by lifting state + reorganizing components
 
-2. EmailJS Fails
+### 2. EmailJS Fails
 Wrong IDs
 
 Missing keys
 ✔️ Solved using .env and checking dashboard
 
-3. UI Component Errors
+### 3. UI Component Errors
 Incorrect imports
 
 Library setup issues
 ✔️ Solved through documentation reading
 
-4. Cart & Payment Bugs
+### 4. Cart & Payment Bugs
 Totals not updating
 
 UI breaks on navigation
 ✔️ Fixed through debugging and cleanup
 
-5. Deployment Errors
+### 5. Deployment Errors
 Case-sensitive filenames
 
 Missing dependencies
 ✔️ Solved using Vercel build logs
 
-🔧 Future Improvements
+## 🔧 Future Improvements
 Real backend (Node.js / Django)
 
 Authentication (Login/Register)
@@ -235,26 +234,9 @@ AI-powered recommendations
 
 Persistent orders & favorites in a database
 
-🎯 About the Developer
-Hi! I'm Amanuel Amare, a passionate Frontend Developer aiming to become a Full-Stack Engineer.
-I enjoy building modern web apps with clean design, scalable architecture, and smooth user experience.
 
-My focus areas include:
 
-Clean UI/UX
 
-Reusable components
-
-Scalable code
-
-Problem solving
-
-Continuous learning
-
-This project helped me improve React skills, state management, complex UI architecture, and real deployment workflows.
-
-🛡️ Tech & Tools Badges
-<div align="center"> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /> <img src="https://img.shields.io/badge/Tailwind-0EA5E9?style=for-the-badge&logo=tailwindcss&logoColor=white" /> <img src="https://img.shields.io/badge/EmailJS-0078FF?style=for-the-badge&logoColor=white" /> <img src="https://img.shields.io/badge/Lucide%20React-18181B?style=for-the-badge&logo=react&logoColor=white" /> <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" /> <img src="https://img.shields.io/badge/Netlify-1E293B?style=for-the-badge&logo=netlify&logoColor=00C7B7" /> <img src="https://img.shields.io/badge/Git-F05133?style=for-the-badge&logo=git&logoColor=white" /> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /> </div>
 🤝 Contributing
 Fork the repo
 
