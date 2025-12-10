@@ -9,7 +9,7 @@ import SignUp from './components/SignUp';
 import Favorites from './components/Favorites';
 import ProductDetails from './components/ProductDetails';
 import Checkout from './components/Checkout';
-import Orders from './components/orders';
+import Orders from './components/Orders';
 import Profile from './components/Profile';
 import Contact from './components/Contact';
 import DealsPrivacy from './components/DealsPrivacy';
