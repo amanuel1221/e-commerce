@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { useAuth } from "../context/authContext";
+import { useAuth } from "../context/AuthContext";
 
 const createProductsStore = (email) => {
   return create(
