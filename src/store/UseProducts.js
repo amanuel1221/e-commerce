@@ -134,6 +134,7 @@ const createProductsStore = (email) => {
     )
   );
 };
+export { createProductsStore };
 
 // Cache created stores per-email so each user has isolated persisted state
 const stores = {};
