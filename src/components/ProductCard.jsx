@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import useProducts from "../store/useProducts";
+import useProducts from "../store/UseProducts";
 import { Heart } from "lucide-react";
 
 const ProductCard = () => {
-  // Zustand state/functions
+  
   const cart = useProducts((state) => state.cart);
   const favorites = useProducts((state) => state.favorites);
   const count = useProducts((state) => state.count);
@@ -29,8 +29,6 @@ const ProductCard = () => {
     fetchingProducts();
     resetCount();
   }, [fetchingProducts, resetCount]);
-
-  // Get products safely
   const rawProducts = typeof getFilteredSortedItems === "function" ? getFilteredSortedItems() : [];
   const products = Array.isArray(rawProducts) ? rawProducts : rawProducts ? Object.values(rawProducts) : [];
 
@@ -43,7 +41,6 @@ const ProductCard = () => {
 
   return (
     <div className="px-6 py-8 bg-gray-50 min-h-screen">
-      {/* Search + Filters */}
       <div className="flex flex-col sm:flex-row justify-between gap-4 mb-6">
         <input
           type="text"

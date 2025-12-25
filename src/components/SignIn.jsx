@@ -1,4 +1,3 @@
-// src/pages/Signin.jsx
 
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -21,7 +20,8 @@ const Signin = () => {
       toast.success("✅ Login successful!");
       setEmail("");
       setPassword("");
-      navigate("/dashboard"); // or change to "/" for homepage
+      
+      navigate("/dashboard");
     } catch (err) {
       if (err.code === "auth/user-not-found") {
         setError("This email is not registered. Please sign up first.");

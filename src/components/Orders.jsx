@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import useOrders from "../store/useOrders";
-import { useAuth } from "../context/authContext";
+import { useAuth } from "../context/AuthContext";
 import { CheckCircle, Clock } from "lucide-react";
 
 const Orders = () => {

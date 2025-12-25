@@ -9,13 +9,15 @@ import SignUp from './components/SignUp';
 import Favorites from './components/Favorites';
 import ProductDetails from './components/ProductDetails';
 import Checkout from './components/Checkout';
-import Orders from './components/orders';
+import Orders from './components/Orders';
 import Profile from './components/Profile';
 import Contact from './components/Contact';
 import DealsPrivacy from './components/DealsPrivacy';
 import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const [userEmail, setUserEmail] = useState(null);
@@ -34,7 +36,14 @@ function App() {
 
   return (
     <>
+     
       <ToastContainer position="top-center" />
+
+      <Toaster 
+        position="top-center"
+        reverseOrder={false}
+      />
+
       <Router>
         <Navbar />
         <Routes>

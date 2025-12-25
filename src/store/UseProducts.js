@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { useAuth } from "../context/authContext";
+import { useAuth } from "../context/AuthContext";
 
 const createProductsStore = (email) => {
   return create(
@@ -134,6 +134,7 @@ const createProductsStore = (email) => {
     )
   );
 };
+export { createProductsStore };
 
 // Cache created stores per-email so each user has isolated persisted state
 const stores = {};

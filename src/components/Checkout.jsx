@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import useProducts from "../store/useProducts";
+import useProducts from "../store/UseProducts";
 import useOrders from "../store/useOrders";
-import { useAuth } from "../context/authContext";
+import { useAuth } from "../context/AuthContext";
 
 const Checkout = () => {
   const navigate = useNavigate();
