@@ -166,8 +166,6 @@ Testing failures → Mocked store & context properly, carefully passing data →
 🔧 Future Improvements
 Real backend (Node.js / Django)
 
-Authentication (Login/Register)
-
 Real payments (Stripe/PayPal)
 
 Admin dashboard
