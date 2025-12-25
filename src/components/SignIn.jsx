@@ -20,6 +20,7 @@ const Signin = () => {
       toast.success("✅ Login successful!");
       setEmail("");
       setPassword("");
+      
       navigate("/dashboard");
     } catch (err) {
       if (err.code === "auth/user-not-found") {
