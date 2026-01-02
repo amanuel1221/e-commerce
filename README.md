@@ -1,11 +1,8 @@
 # 🛒 E-Commerce Website
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Build](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge)
+![Deployment](https://img.shields.io/badge/Deployed-Vercel-black?style=for-the-badge)
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
-![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://react.dev/)  
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-38B2AC?logo=tailwindcss)](https://tailwindcss.com/)  
-![Vite](https://img.shields.io/badge/Vite-4-purple?logo=vite)](https://vitejs.dev/)  
-![Tests](https://img.shields.io/badge/Tests-Vitest-blue?logo=vitest)](https://vitest.dev/)  
-![Deployment](https://img.shields.io/badge/Deployed-Vercel-black?logo=vercel)](https://e-commerce-49ma.vercel.app/)
 
 A **modern responsive e-commerce frontend** built with **React**, **Tailwind CSS**, and **Vite**.  
 Features **product listing**, **cart management**, **favorites**, **dummy payment flow**, **EmailJS contact form**, **AI-driven UI**, and a **clean responsive design**.
@@ -55,6 +52,15 @@ Features **product listing**, **cart management**, **favorites**, **dummy paymen
 
 ![MOBILE GIF](screenshots/mobile.gif)
 
+## Authentications
+### Sign Up 
+ ![sign-up](screenshots/sign-up.gif)
+---
+
+### Sign-in
+![Sign in](screenshots/sign-in.gif)
+
+
 ## 🚀 Features
 
 - 🛍️ Product Listing – Images, prices, descriptions  
@@ -81,7 +87,6 @@ Features **product listing**, **cart management**, **favorites**, **dummy paymen
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 ---
-
 ## 🛠 Tech Stack
 
 - **Frontend:** React + Vite  
