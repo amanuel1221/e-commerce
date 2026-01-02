@@ -1,11 +1,11 @@
 # 🛒 E-Commerce Website
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
-[![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://react.dev/)  
-[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-38B2AC?logo=tailwindcss)](https://tailwindcss.com/)  
-[![Vite](https://img.shields.io/badge/Vite-4-purple?logo=vite)](https://vitejs.dev/)  
-[![Tests](https://img.shields.io/badge/Tests-Vitest-blue?logo=vitest)](https://vitest.dev/)  
-[![Deployment](https://img.shields.io/badge/Deployed-Vercel-black?logo=vercel)](https://e-commerce-49ma.vercel.app/)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
+![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://react.dev/)  
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-38B2AC?logo=tailwindcss)](https://tailwindcss.com/)  
+![Vite](https://img.shields.io/badge/Vite-4-purple?logo=vite)](https://vitejs.dev/)  
+![Tests](https://img.shields.io/badge/Tests-Vitest-blue?logo=vitest)](https://vitest.dev/)  
+![Deployment](https://img.shields.io/badge/Deployed-Vercel-black?logo=vercel)](https://e-commerce-49ma.vercel.app/)
 
 A **modern responsive e-commerce frontend** built with **React**, **Tailwind CSS**, and **Vite**.  
 Features **product listing**, **cart management**, **favorites**, **dummy payment flow**, **EmailJS contact form**, **AI-driven UI**, and a **clean responsive design**.
@@ -27,7 +27,33 @@ Features **product listing**, **cart management**, **favorites**, **dummy paymen
 |-----------|---------|---------|
 | ![Favorites](screenshots/Favorites.png) | ![Contact](screenshots/Contact.png) | ![Payment](screenshots/Payment-2.png) |
 
+
+
+
+
+### ❤️ Favorites
+
+-Adding/removing favorites
+-🛍️ Browse & Add	
+-Browsing products + adding to cart	
 ---
+ ![Favorites GIF](screenshots/favorites.gif)
+
+### 💳 Checkout Flow
+-Simulated checkout process	
+-and sees the order history
+---
+
+![CHECKOUT FLOW GIF](screenshots/checkout.gif)
+
+---
+
+
+### Responsiveness of Website
+-Check the responsiveness with different devices
+---
+
+![MOBILE GIF](screenshots/mobile.gif)
 
 ## 🚀 Features
 
@@ -40,6 +66,19 @@ Features **product listing**, **cart management**, **favorites**, **dummy paymen
 - 🤖 AI Visibility Component – AI-driven product suggestions  
 - 📦 Order History – Simulated order progress (Pending → Delivered)  
 - 🧪 Testing – Vitest + Testing Library for UI & logic  
+
+---
+
+
+
+## *** Tech Stacks & Badges
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)
+![Zustand](https://img.shields.io/badge/Zustand-000000?style=for-the-badge&logo=react&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 ---
 
